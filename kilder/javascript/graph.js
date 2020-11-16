@@ -4,7 +4,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['2014', '2015', '2016', '2017', '2018', '2019'],
         datasets: [{
-            label: 'Drukningsulykker i 2020',
+            label: 'Drukningsulykker i 2020 (middelhavet)',
             data: [3538, 3771, 5096, 3139, 2277, 1148],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
