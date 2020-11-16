@@ -14,10 +14,15 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="./kilder/css/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 </head>
 <body>
 
-    <section class="fullpage center-parent" id="opening">
+        
+    <section class="fullpage" id="opening">
+        <video id="video1" preload="" autoplay="" muted="" playsinline="" loop="">
+            <source src="./kilder/bilder/intro.mp4" type="video/mp4">
+            </video> 
         <h1 class="center-child">REISEN TIL NORGE<span> GJENNOM EUROPA</span></h1>
     </section>
     <section id="intro">
@@ -54,11 +59,8 @@
                 Nabolandene ble hardt rammet av denne flyktningstrømmen og Tyrkia ble fylt opp med syriske migranter som hadde en drøm om å leve med fred i Norge, men det var ikke så lett som det skulle ha seg til.  Mellom grensen til Tyrkia og Hellas er Middelhavet, det skal være antatt at det er den vanskeligste delen av reisen til Norge siden de fleste av immigrantene ikke klarer å svømme. I tillegg til det så må de bruke en gummibåt som egentlig har plass til 5, men siden smuglerne vil tjene mest mulig så lar de 10 folk seile i en gummibåt som er ment for 5. Det skapte derfor masse frykt siden mediene delte den virkelige realiteten til verden og Europa måtte komme inn med en handling fort!
             </p>
 
-            <figure class="image-left-outside">
-                <figcaption>graf over hvor mange som druknet</figcaption>
-            </figure>
-            <br />
-            <br />
+                <canvas id="drukningsulykker"></canvas>
+                <center><small>Kilde <a href="https://data2.unhcr.org/en/situations/mediterranean">UNHCR</a></small></center>
             <br />
             <h2 id="tyrkiastengergrensene">Tyrkia stenger grensene</h2>
             <p>
@@ -87,4 +89,5 @@
             De heldige som fikk oppholdstillatelse, fikk en stor drøm oppfylt. Ifølge SSB sine sider så har de fleste utført norskkurs, integrert seg i landet med jobb og høyere utdanning og et tak over hodet. En av de heldige som tok denne reisen fra Syria som 23 åring er en mann fra Viken.          </p>
     </section>
 </body>
+    <script src="kilder/javascript/graph.js"></script>
 </html>
