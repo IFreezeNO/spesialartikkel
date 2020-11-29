@@ -1,0 +1,255 @@
+/* inkluderer en Google font for bedre lesbarhet */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap');
+
+/* Setter <body> og <html> til 100% store, slik at de alltid tillater fullskjermvisning */
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* SÃ¸rg for at nettleseren animerer scroll pent */
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+/* Sett opp ny font for alle elementer */
+
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.halfwidth-image-right {
+	width: 25rem;
+	float: right;
+	margin-left: 20px;
+}
+
+
+/* Seksjoner */
+
+.fullpage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.halfpage {
+	/* Halv hÃ¸yde. Brukes i parallax-illusjon for Ã¥ avdekke deler av bildet etterhvert som man scroller */
+	width: 100%;
+	height: 50vh;
+}
+
+
+/* Helpers */
+
+p {
+	width: 90vw;
+	max-width: 50rem;
+	display: block;
+	margin: 2rem auto;
+	line-height: 1.3rem;
+}
+
+.content-box {
+	width: 90vw;
+	max-width: 50rem;
+	margin: 20px auto;
+}
+
+
+/* Her skaper vi en parallax-illusjon ved Ã¥ sette et bakgrunnsbilde til fixed
+ * Dermed vil innhold scrolle over det */
+
+.parallax {
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/* Disse kodene illustrerer tre mÃ¥ter Ã¥ sette opp bilder pÃ¥.
+ * .fullwidth-image er en <figure> som fÃ¸lger margene til teksten
+ * pÃ¥ mobil, men fÃ¥r lov til Ã¥ overstige margene nÃ¥r skjermstÃ¸rrelsen tillater det.
+ * .halfwidth-image-right er en <figure> som fÃ¸lger margene til teksten pÃ¥ mobil, men
+ * flyter til hÃ¸yre for teksten og tar opp halve bredden av en setning.
+ * .image-left-outside er en <figure> som fÃ¸lger margene til teksten pÃ¥ mobil, 
+ * men venstrejusteres og flyter utenfor margen nÃ¥r skjermstÃ¸rrelsen tillater det.
+ */
+
+.fullwidth-image,
+.halfwidth-image-right,
+.image-left-outside {
+	width: 90vw;
+	max-width: 60rem;
+	height: auto;
+	margin: 20px auto;
+}
+
+
+/* Koden under sÃ¸rger for at ingen <img>-tager inni en figure fÃ¥r lov til Ã¥ vÃ¦re
+ * bredere enn det <figure>-tagen er, og dermed ikke bryter noen marger.
+ */
+
+.fullwidth-image img,
+.halfwidth-image-right img,
+.image-left-outside img {
+	max-width: 100%;
+}
+
+#video1 {
+	margin: auto;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+/* Sticky-bokser fungerer dÃ¥rlig pÃ¥ mobil, derfor setter vi som standard
+ * at .sticky er en enkel informasjonsboks. Denne blir satt til sticky 
+ * i media-queries nÃ¥r det er plass til det.
+ */
+
+.sticky {
+	position: relative;
+	border: 1px solid #ccc;
+	background: #f3f3f3;
+	padding: 20px;
+	width: 90vw;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+
+#map {
+	width: 50%;
+	height: 450px;
+	margin: auto;
+}
+/* pulserende ringer, ref cssIcon i javascript i bunnen av siden */
+
+.gps_ring {
+	border: 3px solid #185a84;
+	-webkit-border-radius: 30px;
+	height: 25px;
+	width: 25px;
+	-webkit-animation: pulsate 1s ease-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+		-webkit-transform: scale(0.1, 0.1);
+		opacity: 0.0;
+		
+	}
+	50% {
+		opacity: 1.0;
+	}
+	100% {
+		-webkit-transform: scale(1.5, 1.5);
+		opacity: 0.0;
+	}
+}
+
+/* Klassene under sÃ¸rger for komplett vertikal og horisontal sentrering av et element. */
+
+.center-parent {
+	position: relative;
+}
+
+.center-child {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.undermeny {
+	margin-left: 25px;
+	padding: 10px;
+}
+
+a {
+	color: black;
+	text-decoration: none; 
+}
+
+
+/* OPENING */
+
+#opening {
+	background-color: black;
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+#opening h1 {
+	color: #fff;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+#opening h1 span {
+	display: block;
+	overflow: hidden;
+	clear: both;
+	font-size: 1.5rem;
+}
+
+
+/* RESPONSIVE ADJUSTMENTS */
+
+@media (min-width:600px) {
+	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+	#video1 {
+		display: none;
+		;
+		margin: auto;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (min-width:801px) {}
+
+@media (min-width:1025px) {
+	/* big landscape tablets, laptops, and desktops */
+	#opening h1 {
+		font-size: 5rem;
+	}
+	#opening h1 span {
+		font-size: 3rem;
+	}
+	#quote blockquote {
+		font-size: 2rem;
+	}
+	.sticky {
+		max-width: 16vw;
+		position: sticky;
+		top: 20px;
+		margin-right: 90px;
+		float: right;
+	}
+	.halfwidth-image-right {
+		width: 25rem;
+		float: right;
+		margin-left: 20px;
+	}
+	.image-left-outside {
+		width: 35rem;
+		float: left;
+		margin-left: -10rem;
+	}
+}
+
+@media (min-width:1281px) {
+	/* hi-res laptops and desktops */
+}

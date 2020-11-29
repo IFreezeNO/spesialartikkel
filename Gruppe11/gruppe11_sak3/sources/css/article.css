@@ -1,0 +1,217 @@
+@media only screen and (max-width:600px) {
+	body {
+		background: #f3f3f3
+	}
+	.person {
+		margin: auto
+	}
+	#article {
+		width: 100%;
+		padding: 0
+	}
+	article>#intro {
+		font-size: 15px;
+		padding-left: 5px
+	}
+	figure {
+		width: 1wh;
+		margin-block-start: 0;
+		margin-block-end: -70;
+		margin-inline-start: 0;
+		margin-inline-end: 0
+	}
+	figure>#IMGcaption {
+		font-size: calc(4px + .5rem);
+		font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		margin-left: 0
+	}
+	body {
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		margin: 0
+	}
+	h1 {
+		padding-left: 5px
+	}
+	h3 {
+		padding-left: 5px
+	}
+	h4 {
+		padding-left: 5px
+	}
+	p {
+		padding-left: 5px
+	}
+	a {
+		padding-left: 5px
+	}
+}
+
+.forfattere>p {
+	letter-spacing: 0
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #f3f3f3
+}
+
+h1 {
+	height: auto;
+	font-family: titlenews, 'Times New Roman', sans-serif
+}
+
+article {
+	background: #f3f3f3;
+	padding: 5px;
+	margin: auto;
+	width: 1000px
+}
+
+body>article>figure>.artikkelheader {
+	background-image: url(../images/forsidebilde.jpg);
+	width: auto;
+	height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: -40px
+}
+
+canvas {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none
+}
+
+#IMGcaption {
+	font-size: calc(4px + .5rem);
+	font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-left: -40px
+}
+
+#intro {
+	font-size: 18px
+}
+
+.forfattere {
+	font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	max-width: 400px;
+	line-height: 40px;
+	border-left: 5px solid #d8005b
+}
+
+.forfattere>p {
+	margin-left: 5px
+}
+
+@font-face {
+	font-family: Inter;
+	src: url(fonts/Inter-Regular.ttf)
+}
+
+@font-face {
+	font-family: titlenews;
+	src: url(fonts/titlenews.ttf)
+}
+
+* {
+	box-sizing: border-box
+}
+
+body {
+	font-family: Verdana, sans-serif;
+	margin: 0
+}
+
+.mySlides {
+	display: none
+}
+
+img {
+	vertical-align: middle
+}
+
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto
+}
+
+.next,
+.prev {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	transition: .6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	margin-left: -400px;
+	color: #000
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px
+}
+
+.next:hover,
+.prev:hover {
+	background-color: rgba(0, 0, 0, .8)
+}
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	background: #000000e3;
+	text-align: center;
+	bottom: -40px
+}
+
+.numbertext {
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@media only screen and (max-width:300px) {
+	.next,
+	.prev,
+	.text {
+		font-size: 11px
+	}
+}

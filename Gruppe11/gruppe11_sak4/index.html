@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="nb">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script>
+         document.getElementsByTagName("html")[0].className += " js";
+     </script>
+      <title>Reisen til Norge - Spesial</title>
+      <meta name="description" content="Flykningsstrømmen til Norge i 2016 skapte mye kaos for landene som er mellom Norge og Syria. Flere tusen druknet i Stillehavet og mange av flyktningene fikk aldri se Europa med sine egne øyner. Hvordan var det for flyktningene å reise gjennom Tyrkia og over middelhavet?">
+      <!-- open graph-->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Reisen til Norge - Spesial">
+      <meta property="og:description" content="Flykningsstrømmen til Norge i 2016 skapte mye kaos for landene som er mellom Norge og Syria. Flere tusen druknet i Stillehavet og mange av flyktningene fikk aldri se Europa med sine egne øyner. Hvordan var det for flyktningene å reise gjennom Tyrkia og over middelhavet?">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+      <link href="./kilder/css/main.css" rel="stylesheet">
+      <link href="./kilder/css/style.css" rel="stylesheet">
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+   </head>
+   <body>
+      <section class="fullpage" id="opening">
+         <video id="video1" preload="" autoplay="" muted="" playsinline="" loop="">
+            <source src="./kilder/bilder/intro.mp4" type="video/mp4">
+         </video>
+         <h1 class="center-child">REISEN TIL NORGE<span> GJENNOM EUROPA</span></h1>
+      </section>
+      <section id="intro">
+         <aside class="sticky">
+            <h2>NAVIGASJON</h2>
+            <ul>
+               <li><a href="#reisen">REISEN</a></li>
+               <li><a href="#savnet">SAVNET</a></li>
+               <li><a href="#idag">I DAG</a></li>
+               <li><a href="#norgesarbeid">NORGES ARBEID </a></li>
+               <li><a href="#Kart">KART</a></li>
+            </ul>
+         </aside>
+         <div class="content-box">
+         <p>
+            <b> Flyktningstrømmen til Norge i 2016 skapte mye kaos for landene som er mellom Norge og Syria. Flere tusen druknet i middelhavet og mange av flyktningene fikk aldri se Europa med sine egne øyner. Hvordan var det for flyktningene å reise gjennom Tyrkia og over middelhavet?    </b>         
+         </p>
+         <p>
+            De som var heldige å få oppholdstillatelse i et vestlig land, var de som trakk lotto og vant. De fikk en stor drøm oppfylt som innebar å kunne starte et helt nytt liv hvor de ikke lenger trengte å frykte for bomber. Ifølge SSB sine sider så har de fleste utført norskkurs, integrert seg i landet med jobb og høyere utdanning og et tak over hodet. En av de heldige som tok denne reisen fra Syria som 23 åring er en mann fra Viken. Vi har vært så heldige å komme i kontakt med vedkommende og har fått gjennomført et intervju hvor han forteller sin historie. 
+         </p>
+         <h2 id="reisen">Reisen</h2>
+         <p>
+            Jeg var 23 år gammel når jeg opplevde krigen i Syria. Det var en situasjon som noen forventet og enkelte ikke. Jeg hadde en dårlig følelse på starten av  denne revolusjon, og etter det så det ut som det ikke skulle ta slutt med det samme.
+         </p>
+         <figure class="halfwidth-image-right">
+            <img src="./kilder/bilder/bashid.jpg" width="350" alt="" />
+            <figcaption>Mohammed Bashid ble nylig ferdig med norskkurs. Foto: Privat.</figcaption>
+         </figure>
+         <p>
+            Vinteren 2011 hadde den arabiske våren nådd sitt siste stopp Syria. Før Syria så hadde den vært gjennom land som Tunisia, Libya og Egypt. Alle landene fikk til en revolusjon og de fikk byttet styreformen til demokrati. Syria derimot har fortsatt problemer med den revolusjonen, den har skapt både frykt, usikkerhet og elendighet over landet og innbyggerne.         </p>
+         <p>
+            Jeg hadde aldri tenkt å flykte til Norge. I begynnelsen flyktet jeg til Tyrkia for å jobbe der på grunn av dårlig økonomi fordi alt ble dyrt etterhvert. Etter to og halvt år hørte vi at europeiske land vil ta imot mange flyktninger til Norge.  Det er da jeg bestemte meg for å handle og pakke ferdig. I Norge var det annerledes. Klimaet i Norge utgjør stor forskjell ved å komme fra varmere land, og i tillegg så er kulturen og folket ganske forskjellig. Likevel må man tilpasse seg for å overleve og jeg ble mer og mer vant til Norge.
+         </p>
+         <p>
+            Desto lenger tid det gikk, jo større skader fikk landet gjennomgå. IS begynte å blomstre opp og ta over deler av landet samtidig som den syriske hæren fikk militært støtte av Iran og Russland for å kontrollere revolusjonen. En veldig stor del av Syria var ødelagt av denne krigen og skadene var umulig å fikse. Jobber og bedrifter hadde blitt til ruiner av bomber og mange hadde mistet sine familiemedlemmer. De som var håndverkere og som nå hadde mistet en arm eller to, måtte nå finne andre måter for å kunne forsørge for sin familie på. Ettersom krigen og elendigheten ble verre og verre begynte de å se på muligheten for å flykte til andre land. Vekk fra krigen. 
+         </p>
+         <canvas id="syriskeflyktninger"></canvas>
+         <center><small>Kilde <a href="https://www.ssb.no/befolkning/artikler-og-publikasjoner/rekordmange-har-kommet-fra-syria-siste-par-ar--331535" target="_blank">Befolkningsstatistikk, Statistisk sentralbyrå</a></small></center>
+         <br />
+         
+         <p>
+            Reisen til Norge må være den verste opplevelsen som jeg kommer til å huske gjennom hele livet mitt. Det er de forferdelige minnene fra båten som kommer tilbake hver gang. Spesielt i båten, det var alt fra barn til voksne, og i tillegg til folk som dessverre ikke klarte å komme til siste stopp. Reisen innebar en utrolig risiko men jeg så ingen annen vei.
+         </p>
+         <figure class="halfwidth-image-right">
+            <img src="./kilder/bilder/flyktningeribaat.jpg" alt="Flyktninger i middelhavet som blir reddet middelhavet" />
+            <figcaption>Flyktninger i middelhavet som blir reddet middelhavet. Foto: Kripos/Scanpix.</figcaption>
+         </figure>
+         <p>
+            Det er estimert at rundt 5 000 000 mennesker ble drevet ut i flukt grunnet elendigheten President Bashar al-Assad brakte inn i landet ved å ikke trekke seg som leder i Syria etter å la ledet Syria siden 2000. Samtidig som det var 5 millioner som var på flukt i 2015 hadde tallet på drepte nådd 400 000 i 2016. Noe som skapte enda mer stress og kaos for familiene som ville leve i fred i et land med fremtid og håp. Mange familier hadde denne tenkemåten så det førte til en av de verste flyktningkrisene siden andre verdenskrig. Nå måtte mange vestlige land åpne opp for disse flyktningene.
+         </p>
+         <p>
+            Nabolandene ble hardt rammet av denne flyktningstrømmen og Tyrkia ble fylt opp med syriske migranter som hadde en drøm om å leve med fred i Norge, men det var ikke så lett som det skulle ha seg til. Mellom grensen til Tyrkia og Hellas er Middelhavet, det skal være antatt at det er den vanskeligste delen av reisen til Norge siden de fleste av immigrantene ikke klarer å svømme. Her var det stor risiko for at båten skulle kantre på grunn av vanskelig vær eller overfylt båt. Men de fleste flyktningene var villige til å ta den risikoen, inkludert Mohammed fordi han var klar over gevinsten hvis de klarte det. I tillegg til det så må de bruke en gummibåt som egentlig har plass til 5, men siden smuglerne vil tjene mest mulig så lar de 10 folk seile i en gummibåt som er ment for 5. Det skapte derfor masse frykt siden mediene delte den virkelige realiteten til verden og Europa måtte komme inn med en handling fort for å løse dette! 
+         </p>
+         <canvas id="drukningsulykker"></canvas>
+         <center><small>Kilde <a href="https://data2.unhcr.org/en/situations/mediterranean" target="_blank">UNHCR</a></small></center>
+         <br />
+         <p>
+            Den tyrkiske regjeringen krevde at Europa skulle betale de penger for å stenge grensen mellom Tyrkia og hellas, og Europa godtok den avtalen. Dette førte til at immigrantene ble sittende fast i leirer i Tyrkia helt til de fikk visa, noe som ikke var en garanti engang. Syria leiren skapte store problemer når flere og flere ble sittende fast i Tyrkia som et mellomledd til Europa. Omstendighetene i leirene er beskrevet som forferdelige for barn på grunn av dårlig kvalitet og mangel. Dette førte til at kriminalitet vokste i leirene. 
+         </p>
+         <p>
+            Leirene i Tyrkia ble etter hvert overfylte og landet kunne ikke holde flere Syriske flyktninger, dermed måtte de åpne grensene igjen og en ny bølge med immigranter fikk sjansen til å komme seg til Norge og andre land og prøve å få et visum. 
+         </p>
+         
+         <h2 id="savnet">Savnet</h2>
+         <p>Det jeg savner med landet er alt, blant annet minner som jeg har hatt der gjennom oppveksten min. Den følelsen av trygghet i eget land der du har etablert hele livet ditt og alt er på et sted, klima, folket og naturen.  Jeg savner mest foreldrene mine, men dem har jeg mistet. Derfor savner jeg ikke så mye av de andre tingene, fordi de var alt for meg og de andre tingene betyr ikke så mye.</p>
+         <h2 id="idag">I dag</h2>
+         <p>Mohammed har utført norskkurs og er godt integrert i det norske systemet. Han har en jobb som butikkmedarbeider og i fremtiden så vil han gjerne bli hjelpearbeider i et asylmottak eller tolk der han kan hjelpe andre innvandrere til å integrere seg inn i landet. Det er ikke alltid lett å være i et fremmed land alene, så det er det som driver motivasjonen hans. 
+         </p>
+         <p>I dag så er det mye mer kontroll over flyktninger og antall asylsøkere har holdt seg stabilt gjennom året, ut i fra UDI sine sider så har de vurdert opptil 7 000 saker dette året, noe som ikke er så mye i forhold til 2015 når tallet nærmet seg minst 15 000 søkere. Grunnen til at den er så stabil er at coronaviruset har satt en stopper i at immigranter kan bevege seg inn i land så lett. Grensene i de forskjellige landene er stengt for at viruset ikke skal spre seg gjennom landegrensene, og det påvirker samtidig flyktningene. Tall fra flyktninghjelpen sier at mellom 2011 og 2015 så var det 5 000 000 flyktninger, men nå er det 6 735 000 flyktninger fra Syria. Det betyr at i løpet av de siste 5 årene så er det 1 735 000 nye flyktninger for har dratt fra landet sitt. Men som kriger blir skapt og situasjoner blir vanskeligere for mennesker som befinner seg i krigsherjede land så vil også disse velge å flykte fra hjemlandet og forsøke seg på et nytt og bedre liv i vesten. </p>
+
+         <p>
+            Jeg tror ikke at den krigen kommer til å ta slutt. La oss si at det kommer til å ta slutt snart en dag, men likevel om den gjør det så vil den tryggheten vi har hatt før krigen forsvinne, og jeg er redd at den følelsen av trygghet kommer aldri tilbake igjen.          </p>
+
+         <h2 id="norgesarbeid">Norges arbeid i flyktningkrisen</h2>
+         <p>
+            I SSB sine sider så meldes det at 2015 høsten var det størst pågang med asylsøkere fra Syria, ut ifra tallene så er over halvparten av asylsøkerne det året fra enten Syria eller Afghanistan. Det er meldt at rundt 8 500 migranter fra Syria alene søkte om asyl i en periode fra september til november. Tallet på hvor mange som fikk lov til å forbli er ukjent, men SSB melder at de fleste av de fikk bli i Norge grunnet ustabilitet i hjemlandet og at det var for farlig å sende de hjem igjen. De uheldige som måtte dra tilbake var immigranter som hadde blitt avvist i et annet land. Disse måtte nå innse nederlaget og forsøke å gjøre det beste ut av den forferdelige situasjonen de nå sto overfor.          <p>
+            Leirene i Tyrkia ble etter hvert overfylte og landet kunne ikke holde flere Syriske flyktninger, dermed måtte de åpne grensene igjen og en ny bølge med immigranter fikk sjansen til å komme seg til Norge og andre land og prøve å få et visum. 
+         </p>
+         <p>
+            Ifølge regjeringen så gjør de alt for at immigranter skal komme trygt inn i landet utenom å risikere sitt eget liv for en fremtid i fred. I grensen til Hellas så har Norge støttet hjelpeorganisasjoner som blant annet flyktninghjelpen, røde kors og leger uten grenser med 33 millioner euro, i tillegg til den faste EØS-midlene for flyktninger i nød. De midlene ble brukt for å håndtere båt immigrantene som kommer fra Tyrkia. Ifølge statistikker fra leger uten grenser så meldes det at minst 1000 dør på grunn av drukningsulykke hvert år på grunn av at gummibåten gir etter. Det er også meldt at de har reddet over 24 000 personer fra å havne i drukningsulykke takket være støtten de får av Norge og EU.
+         </p>
+        
+       
+
+      </section>
+      <section id="Kart" class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+         <div id="map"></div>
+         <div class="cd-h-timeline__container container">
+             <div class="cd-h-timeline__dates">
+                 <div class="cd-h-timeline__line">
+                     <ol>
+                         <ul><a href="#0" data-date="01/08/2002" onclick="getMap([34.52556006767288,38.28560023671878])" class="cd-h-timeline__date cd-h-timeline__date--selected">Syria</a></ul>
+                         <ul><a href="#0" data-date="01/08/2003" onclick="getMap([38.411412888168336,28.914262346093782])" class="cd-h-timeline__date">Tyrkia</a></ul>
+                         <ul><a href="#0" data-date="01/08/2006" onclick="getMap([38.31665676357648,22.888261369531282])" class="cd-h-timeline__date">Hellas</a></ul>
+                         <ul><a href="#0" data-date="01/08/2008" onclick="getMap([59.40651221962075,11.193315080468782])" class="cd-h-timeline__date">Norge</a></ul>
+                     </ol>
+ 
+                     <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+                 </div>
+                 <!-- .cd-h-timeline__line -->
+             </div>
+             <!-- .cd-h-timeline__dates -->
+ 
+             <ul>
+                 <ul><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></ul>
+                 <ul><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></ul>
+             </ul>
+         </div>
+         <!-- .cd-h-timeline__container -->
+ 
+         <div class="cd-h-timeline__events">
+             <ol>
+                 <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+                     <div class="cd-h-timeline__event-content container">
+                         <h2 class="cd-h-timeline__event-title">Syria</h2>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             Syria sin revolusjon startet i 2011, men jo lenger tid det tok, desto større ble krisen i landet. I 2014 så ble det altfor mye og Mohammed kunne ikke se en fremtid i dette landet. Flere av hans venner hadde blitt drept av regimet og han hadde mistet sine foreldre til krigen. Før krigen så hadde Mohammed et helt normalt liv der han gikk ut med venner, spiste god mat og opplevde den fine kulturen i landet.
+                         </p>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             Mohammed hadde fast jobb med god inntekt mens han bodde sammen med foreldrene, så han hadde samlet opp en god del penger før han bestemte seg at landet ble altfor farlig for han. 
+                         </p>
+                         <br/><br/>
+                     </div>
+                 </li>
+ 
+                 <li class="cd-h-timeline__event text-component">
+                     <div class="cd-h-timeline__event-content container">
+                         <h2 class="cd-h-timeline__event-title">Tyrkia</h2>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             I Tyrkia så var det ganske bra. Han fikk midlertidig visum og han fikk en jobb som butikkmedarbeider. Mohammed hadde sett for seg et liv i Tyrkia siden det eneste han ville ha var fred der han kunne ha en familie og leve i harmoni. Etter noen måneder så ble økonomien i Tyrkia ganske dårlig og han ble tvunget til å jobbe mye med lite lønn. Etter hvert så kom det nyheter om at Europa, Norge tar imot flyktninger fra Syria og han bestemte seg nok en gang for å forlate landet, men før det så måtte han krysse Middelhavet.                         </p>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             Mohammed kontaktet noen smuglere som kunne få han over til Hellas for en billig penge og han tok denne risikoen. </p>
+                             <br/><br/>
+                     </div>
+                 </li>
+ 
+                 <li class="cd-h-timeline__event text-component">
+                     <div class="cd-h-timeline__event-content container">
+                         <h2 class="cd-h-timeline__event-title">Hellas</h2>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             Mellom Hellas og Tyrkia så ble Mohammed stappet inn i en båt med både voksne, eldre og barn. Det var også mange spedbarn i denne lille gummibåten.
+                         </p>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             «Reisen mellom Middelhavet må være det verste jeg har opplevd. Spesielt i båten der det var alt fra barn til voksne, i tillegg til folk som dessverre ikke klarte å komme til siste stopp» 
+                         </p>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             Mohammed forklarer at den turen var både kaldt, vått og mørkt. Smuglerene sa at det var best sjanse for å komme til Hellas om natta siden patruljebåtene pleide å jobbe om dagen.  
+                         </p>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             Når han nådde frem til Hellas så var reisen gjennom de andre landene mye lettere enn reisen over Middelhavet, men alt i alt så var det en dårlig og skummel opplevelse. 
+                         </p><br/><br/>
+                         </div>
+                     
+                 </li>
+ 
+                 <li class="cd-h-timeline__event text-component">
+                     <div class="cd-h-timeline__event-content container">
+                         <h2 class="cd-h-timeline__event-title">Norge</h2>
+                         <p class="cd-h-timeline__event-description color-contrast-medium">
+                             Mohammed ankom Norge når han var rundt 23 år. Han fikk oppholdstillatelse fra UDI og han ville raskest mulig integrere seg i landet for å få livet på stell. Det første han gjorde var derfor å gå på norskkurs slik at han kunne få seg en jobb i fremtiden. På 4 år så har Mohammed klart å få seg jobb og fullført norskkurs. I fremtiden så ser han for seg en utdanning der han kan få en bra lønn og etter hvert egen bolig og familie.                         </p>
+                             <br/><br/>   </div>
+                 </li>
+ 
+             </ol>
+         </div>
+         <!-- .cd-h-timeline__events -->
+      </section>
+   </body>
+   <script src="kilder/javascript/util.js"></script>
+   <!-- util functions included in the CodyHouse framework -->
+   <script src="kilder/javascript/swipe-content.js"></script>
+   <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+   <script src="kilder/javascript/main.js"></script>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+   <script src="kilder/javascript/map.js"></script>
+   <script src="kilder/javascript/graph.js"></script>
+
+
+</html>

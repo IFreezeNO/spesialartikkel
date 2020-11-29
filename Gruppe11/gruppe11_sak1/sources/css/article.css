@@ -1,0 +1,166 @@
+@media only screen and (max-width: 600px) {
+	body {
+		background: #f3f3f3;
+	}
+	.person {
+		margin: auto;
+	}
+	#article {
+		width: 100%;
+		padding: 0px;
+	}
+	article>#intro {
+		font-size: 15px;
+		padding-left: 5px
+	}
+	figure {
+		width: 1wh;
+		margin-block-start: 0;
+		margin-block-end: -70;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+	}
+	figure>#IMGcaption {
+		font-size: calc(4px + 0.5rem);
+		font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		margin-left: 0px;
+	}
+	body {
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		margin: 0;
+	}
+	h1 {
+		padding-left: 5px
+	}
+	h3 {
+		padding-left: 5px
+	}
+	h4 {
+		padding-left: 5px
+	}
+	p {
+		padding-left: 5px
+	}
+	li {
+		padding-left: 5px
+	}
+	a {
+		padding-left: 5px
+	}
+	article>.intervjue {
+		grid-template-columns: auto;
+		background-color: #f3f3f3;
+	}
+	.scroller {
+		background-image: url('../images/coronatest.jpg') no-repeat center center fixed;
+		background-attachment: scroll;
+	}
+}
+
+.forfattere>p {
+	letter-spacing: 0px;
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #f3f3f3;
+}
+
+h1 {
+	height: auto;
+	font-family: titlenews, 'Times New Roman', 'sans-serif';
+}
+
+article {
+	background: #f3f3f3;
+	padding: 5px;
+	margin: auto;
+	width: 1000px;
+}
+
+body>article>figure>.artikkelheader {
+	background-image: url("../images/forsidebilde.jpg");
+	width: auto;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: -40px;
+}
+
+#IMGcaption {
+	font-size: calc(4px + 0.5rem);
+	font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-left: -40px;
+}
+
+#intro {
+	font-size: 18px;
+}
+
+.forfattere {
+	font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	max-width: 400px;
+	line-height: 40px;
+	border-left: 5px solid #8fb0eb;
+}
+
+.forfattere>p {
+	margin-left: 5px;
+}
+
+#mapid {
+	height: 50vh;
+	width: 100wv;
+	margin: auto
+}
+
+.intervjue {
+	padding-top: 5px;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+	margin-top: 15px;
+}
+
+.informasjonavperson {
+	padding: 5px;
+}
+
+p {
+	letter-spacing: 0.8px;
+}
+
+.scroller {
+	background-image: url('../images/slide.jpg');
+	min-height: 400px;
+	background-attachment: fixed;
+	background-position: center;
+	background-position: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.scrollerinside,
+.inside {
+	height: auto;
+	background: #f3f3f3;
+	padding: 2px;
+
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url(./fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+	font-family: titlenews;
+	src: url(./fonts/titlenews.ttf);
+}
+
+video {
+	max-width: 100%;
+	height: auto;
+}
